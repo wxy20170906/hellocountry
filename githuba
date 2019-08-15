@@ -1,0 +1,105 @@
+wxy@wxy-X542UN:~$ git status
+fatal: 不是一个 git 仓库（或者任何父目录）：.git
+wxy@wxy-X542UN:~$ cd MyGit
+wxy@wxy-X542UN:~/MyGit$ git status
+位于分支 master
+
+尚无提交
+
+无文件要提交（创建/拷贝文件并使用 "git add" 建立跟踪）
+wxy@wxy-X542UN:~/MyGit$ git add
+没有指定文件，也没有文件被添加。
+也许您想要执行 'git add .'？
+wxy@wxy-X542UN:~/MyGit$ git add .
+wxy@wxy-X542UN:~/MyGit$ git status
+位于分支 master
+
+尚无提交
+
+无文件要提交（创建/拷贝文件并使用 "git add" 建立跟踪）
+wxy@wxy-X542UN:~/MyGit$ git add linuxbuzhou
+fatal: 路径规格 'linuxbuzhou' 未匹配任何文件
+wxy@wxy-X542UN:~/MyGit$ git add linuxbuzhiu
+wxy@wxy-X542UN:~/MyGit$ git status
+位于分支 master
+
+尚无提交
+
+要提交的变更：
+  （使用 "git rm --cached <文件>..." 以取消暂存）
+
+	新文件：   linuxbuzhiu
+
+wxy@wxy-X542UN:~/MyGit$ git add .
+wxy@wxy-X542UN:~/MyGit$ git commit -m "My"
+
+*** 请告诉我你是谁。
+
+运行
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+来设置您账号的缺省身份标识。
+如果仅在本仓库设置身份标识，则省略 --global 参数。
+
+fatal: 无法自动探测邮件地址（得到 'wxy@wxy-X542UN.(none)'）
+wxy@wxy-X542UN:~/MyGit$ git config --global user.email "you@example.com"
+wxy@wxy-X542UN:~/MyGit$ git config --global user.email "1270430821@qq.com"
+wxy@wxy-X542UN:~/MyGit$ git config --global user.name"helloworld"
+wxy@wxy-X542UN:~/MyGit$ git commit -m "My"
+[master （根提交） 05d7a88] My
+ 1 file changed, 5 insertions(+)
+ create mode 100644 linuxbuzhiu
+wxy@wxy-X542UN:~/MyGit$ ssh-keygen -t rsa -C"1270430821@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/wxy/.ssh/id_rsa): 
+Created directory '/home/wxy/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/wxy/.ssh/id_rsa.
+Your public key has been saved in /home/wxy/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:z6peWn8pKpC+TPRIoWLDLR/Z8PGbawSPR5VUEuEoe7M 1270430821@qq.com
+The key's randomart image is:
++---[RSA 2048]----+
+|        .==.     |
+|        oo.      |
+|   ..o ...       |
+|. ..=o=.         |
+|.=.+o==+S        |
+|..+o++.+=o       |
+|   oo.+Eo o  .   |
+|   o. .=.o. o    |
+|    oo=+o..o     |
++----[SHA256]-----+
+wxy@wxy-X542UN:~/MyGit$ 
+wxy@wxy-X542UN:~/MyGit$ git remote add origin https://github.com/17824909342/hellocountry.git
+wxy@wxy-X542UN:~/MyGit$ git push origin master
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+
+
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/17824909342/hellocountry.git/'
+wxy@wxy-X542UN:~/MyGit$ 
+wxy@wxy-X542UN:~/MyGit$ 
+wxy@wxy-X542UN:~/MyGit$ git push origin master
+Username for 'https://github.com': hellocountry
+Password for 'https://hellocountry@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/17824909342/hellocountry.git/'
+wxy@wxy-X542UN:~/MyGit$ git push origin master
+Username for 'https://github.com': 17824909342
+Password for 'https://17824909342@github.com': 
+对象计数中: 3, 完成.
+Delta compression using up to 8 threads.
+压缩对象中: 100% (2/2), 完成.
+写入对象中: 100% (3/3), 580 bytes | 580.00 KiB/s, 完成.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/17824909342/hellocountry.git
+ * [new branch]      master -> master
+wxy@wxy-X542UN:~/MyGit$ ^C
+wxy@wxy-X542UN:~/MyGit$ ^C
+wxy@wxy-X542UN:~/MyGit$ 
+
