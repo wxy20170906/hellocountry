@@ -4,7 +4,7 @@ wxy@wxy-X542UN:~$ cd MyGit
 wxy@wxy-X542UN:~/MyGit$ git status
 位于分支 master
 
-尚无提交
+尚无提交...
 
 无文件要提交（创建/拷贝文件并使用 "git add" 建立跟踪）
 wxy@wxy-X542UN:~/MyGit$ git add
